@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">interface </span><span class="s1">Transporter </span><span class="s2">{</span>
+    <span class="s0">void </span><span class="s1">howToTransport</span><span class="s2">();</span>
+<span class="s2">}</span>
+
+<span class="s0">class </span><span class="s1">CarTransporter </span><span class="s0">implements </span><span class="s1">Transporter </span><span class="s2">{</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">howToTransport</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;The car is on the road.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s0">class </span><span class="s1">AeroplaneTransporter </span><span class="s0">implements </span><span class="s1">Transporter </span><span class="s2">{</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">howToTransport</span><span class="s2">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;The aeroplane is in the air.&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Car car </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">(</span><span class="s3">&quot;Sedan&quot;</span><span class="s2">, </span><span class="s4">1500</span><span class="s2">, </span><span class="s4">2022</span><span class="s2">, </span><span class="s4">20000</span><span class="s2">);</span>
+        <span class="s1">Aeroplane aeroplane </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Aeroplane</span><span class="s2">(</span><span class="s3">&quot;Boeing 747&quot;</span><span class="s2">, </span><span class="s4">500</span><span class="s2">, </span><span class="s4">2020</span><span class="s2">, </span><span class="s4">1000000</span><span class="s2">);</span>
+        <span class="s1">CarTransporter carTransporter </span><span class="s2">= </span><span class="s0">new </span><span class="s1">CarTransporter</span><span class="s2">();</span>
+        <span class="s1">AeroplaneTransporter aeroplaneTransporter </span><span class="s2">= </span><span class="s0">new </span><span class="s1">AeroplaneTransporter</span><span class="s2">();</span>
+        <span class="s1">car</span><span class="s2">.</span><span class="s1">displayVehicle</span><span class="s2">();</span>
+        <span class="s1">carTransporter</span><span class="s2">.</span><span class="s1">howToTransport</span><span class="s2">();</span>
+        <span class="s1">aeroplane</span><span class="s2">.</span><span class="s1">displayVehicle</span><span class="s2">();</span>
+        <span class="s1">aeroplaneTransporter</span><span class="s2">.</span><span class="s1">howToTransport</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
